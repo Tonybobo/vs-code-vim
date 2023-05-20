@@ -48,7 +48,11 @@
       "before": ["<Leader>",":"],
       "commands": ["workbench.action.showCommands"]
     },
-       {
+    {
+      "before": ["<Leader>" , "q"],
+      "commands" : ["workbench.action.closeActiveEditor"]
+    },
+    {
       "before": ["<Leader>", "t", "t"],
       "commands": [":tabnew"]
     },
