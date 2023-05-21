@@ -71,7 +71,7 @@
       {
       "before": ["leader", "w"],
       "commands": [
-          "workbench.action.files.save",
+          "workbench.action.files.save"
       ]
     },
     {
@@ -83,7 +83,7 @@
     {
       "before": ["<leader>", "h"],
       "commands": ["workbench.action.splitEditor"]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -103,7 +103,7 @@
       "commands": [
           "editor.action.commentLine",
           "extension.vim_escape"
-      ],
+      ]
     }
   ],
   "vim.statusBarColorControl": true,
