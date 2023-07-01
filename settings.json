@@ -45,6 +45,14 @@
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+        "before": ["J"],
+        "commands": ["editor.action.moveLinesDownAction"]
+    }, // moveLineDown
+    {
+        "before": ["K"],
+        "commands": ["editor.action.moveLinesUpAction"]
+    },// moveLineUp
+    {
       "before": ["<Leader>",":"],
       "commands": ["workbench.action.showCommands"]
     },
