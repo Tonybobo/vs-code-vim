@@ -3,11 +3,11 @@
   "explorer.confirmDelete": false,
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.folding": false,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.insertSemicolon": true
+  },
   "docker.languageserver.formatter.ignoreMultilineInstructions": true,
-  "workbench.iconTheme": "vs-minimal",
-  "workbench.productIconTheme": "el-vsc-v1-icons",
   "workbench.colorTheme": "Solarized Dark",
   "editor.fontLigatures": false,
   "vim.easymotion": true,
@@ -18,10 +18,10 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
+      "before": ["j", "j"],
       "after": ["<Esc>", "l"]
     },
-      {
+    {
       "before": ["<C-h>"],
       "after": ["<C-w>", "h"]
     },
@@ -45,20 +45,20 @@
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-        "before": ["J"],
-        "commands": ["editor.action.moveLinesDownAction"]
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
     }, // moveLineDown
     {
-        "before": ["K"],
-        "commands": ["editor.action.moveLinesUpAction"]
-    },// moveLineUp
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }, // moveLineUp
     {
-      "before": ["<Leader>",":"],
+      "before": ["<Leader>", ":"],
       "commands": ["workbench.action.showCommands"]
     },
     {
-      "before": ["<Leader>" , "q"],
-      "commands" : ["workbench.action.closeActiveEditor"]
+      "before": ["<Leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
     {
       "before": ["<Leader>", "t", "t"],
@@ -76,17 +76,13 @@
       "before": ["<Leader>", "t", "o"],
       "commands": [":tabo"]
     },
-      {
+    {
       "before": ["leader", "w"],
-      "commands": [
-          "workbench.action.files.save"
-      ]
+      "commands": ["workbench.action.files.save"]
     },
     {
-      "before" : ["<leader>","e"],
-      "commands" : [
-        "workbench.view.explorer"
-      ]
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
     },
     {
       "before": ["<leader>", "h"],
@@ -108,10 +104,7 @@
     },
     {
       "before": ["<leader>", "c"],
-      "commands": [
-          "editor.action.commentLine",
-          "extension.vim_escape"
-      ]
+      "commands": ["editor.action.commentLine", "extension.vim_escape"]
     }
   ],
   "vim.statusBarColorControl": true,
@@ -126,11 +119,16 @@
   "vim.statusBarColors.easymotionmode": "#007ACC",
   "vim.statusBarColors.easymotioninputmode": "#007ACC",
   "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.foldfix": true,
   "workbench.colorCustomizations": {
     "statusBar.background": "#B48EAD",
     "statusBar.noFolderBackground": "#B48EAD",
     "statusBar.debuggingBackground": "#B48EAD",
     "statusBar.foreground": "#000",
     "statusBar.debuggingForeground": "#000"
-  }
+  },
+  "redhat.telemetry.enabled": true,
+  "workbench.startupEditor": "none",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
