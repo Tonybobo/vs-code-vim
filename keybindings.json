@@ -146,7 +146,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+j",
+    "key": "tab j",
     "command": "cursorDown",
     "when": "textInputFocus"
   },
@@ -156,7 +156,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+k",
+    "key": "tab k",
     "command": "cursorUp",
     "when": "textInputFocus"
   },
@@ -164,5 +164,25 @@
     "key": "up",
     "command": "-cursorUp",
     "when": "textInputFocus"
+  },
+  {
+    "key": "tab j",
+    "command": "cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+down",
+    "command": "-cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "tab p",
+    "command": "extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
   }
 ]
