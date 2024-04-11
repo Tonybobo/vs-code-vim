@@ -1,14 +1,24 @@
 {
-  "window.zoomLevel": 1,
   "explorer.confirmDelete": false,
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "quickfix.insertSemicolon": true
+    "quickfix.insertSemicolon": "explicit"
   },
-  "docker.languageserver.formatter.ignoreMultilineInstructions": true,
-  "workbench.colorTheme": "Solarized Dark",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript][javascriptreact][typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css][scss][less]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "workbench.colorTheme": "Codey Midnight",
   "editor.fontLigatures": false,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -18,24 +28,50 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>", "l"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>",
+        "l"
+      ]
     },
     {
-      "before": ["<C-h>"],
-      "after": ["<C-w>", "h"]
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
     },
     {
-      "before": ["<C-j>"],
-      "after": ["<C-w>", "j"]
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
     },
     {
-      "before": ["<C-k>"],
-      "after": ["<C-w>", "k"]
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
     },
     {
-      "before": ["<C-l>"],
-      "after": ["<C-w>", "l"]
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
     }
   ],
   "vim.leader": "<space>",
@@ -45,74 +81,183 @@
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["J"],
-      "commands": ["editor.action.moveLinesDownAction"]
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
     }, // moveLineDown
     {
-      "before": ["K"],
-      "commands": ["editor.action.moveLinesUpAction"]
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
     }, // moveLineUp
     {
-      "before": ["<Leader>", ":"],
-      "commands": ["workbench.action.showCommands"]
+      "before": [
+        "<Leader>",
+        ":"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
     },
     {
-      "before": ["<Leader>", "q"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<Leader>",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     {
-      "before": ["<Leader>", "t", "t"],
-      "commands": [":tabnew"]
+      "before": [
+        "<Leader>",
+        "H"
+      ],
+      "commands": [
+        "workbench.action.decreaseViewWidth"
+      ]
     },
     {
-      "before": ["<Leader>", "n"],
-      "commands": [":tabnext"]
+      "before": [
+        "<Leader>",
+        "L"
+      ],
+      "commands": [
+        "workbench.action.increaseViewWidth"
+      ]
     },
     {
-      "before": ["<Leader>", "p"],
-      "commands": [":tabprev"]
+      "before": [
+        "<Leader>",
+        "t",
+        "t"
+      ],
+      "commands": [
+        ":tabnew"
+      ]
     },
     {
-      "before": ["<Leader>", "t", "o"],
-      "commands": [":tabo"]
+      "before": [
+        "<Leader>",
+        "n"
+      ],
+      "commands": [
+        ":tabnext"
+      ]
     },
     {
-      "before": ["leader", "w"],
-      "commands": ["workbench.action.files.save"]
+      "before": [
+        "<Leader>",
+        "p"
+      ],
+      "commands": [
+        ":tabprev"
+      ]
     },
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "before": [
+        "<Leader>",
+        "t",
+        "o"
+      ],
+      "commands": [
+        ":tabo"
+      ]
     },
     {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.splitEditor"]
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
     },
     {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
     },
     {
-      "before": ["p"],
-      "after": ["p", "g", "v", "y"]
+      "before": [
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ]
     },
     {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.commentLine", "extension.vim_escape"]
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine",
+        "extension.vim_escape"
+      ]
     }
   ],
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#8FBCBB", "#000"],
-  "vim.statusBarColors.insert": ["#BF616A", "#000"],
-  "vim.statusBarColors.visual": ["#B48EAD", "#000"],
-  "vim.statusBarColors.visualline": ["#B48EAD", "#000"],
-  "vim.statusBarColors.visualblock": ["#A3BE8C", "#000"],
+  "vim.statusBarColors.normal": [
+    "#8FBCBB",
+    "#000"
+  ],
+  "vim.statusBarColors.insert": [
+    "#BF616A",
+    "#000"
+  ],
+  "vim.statusBarColors.visual": [
+    "#B48EAD",
+    "#000"
+  ],
+  "vim.statusBarColors.visualline": [
+    "#B48EAD",
+    "#000"
+  ],
+  "vim.statusBarColors.visualblock": [
+    "#A3BE8C",
+    "#000"
+  ],
   "vim.statusBarColors.replace": "#D08770",
   "vim.statusBarColors.commandlineinprogress": "#007ACC",
   "vim.statusBarColors.searchinprogressmode": "#007ACC",
@@ -129,6 +274,17 @@
   },
   "redhat.telemetry.enabled": true,
   "workbench.startupEditor": "none",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "workbench.iconTheme": "vscode-icons",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  "dart.flutterSdkPath": "C:\\dev\\flutter",
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "extensions.ignoreRecommendations": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
 }
