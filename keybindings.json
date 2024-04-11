@@ -76,7 +76,7 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "ctrl+a [",
+    "key": "space [",
     "command": "editor.fold",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -86,7 +86,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+a ctrl+]",
+    "key": "space ]",
     "command": "editor.unfold",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -184,5 +184,13 @@
     "key": "ctrl+p",
     "command": "-extension.vim_ctrl+p",
     "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
   }
 ]
