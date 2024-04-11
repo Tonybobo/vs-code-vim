@@ -3,6 +3,48 @@
   "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.formatOnSave": true,
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night]": { // or "[Tokyo Night Storm]"
+      "textMateRules": [
+        {
+          "scope": [
+            "comment keyword.codetag.notation",
+            "comment.block.documentation keyword",
+            "comment.block.documentation storage.type.class"
+          ],
+          "settings": {
+            "foreground": "#bb9af7"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation entity.name.type.instance"
+          ],
+          "settings": {
+            "foreground": "#73daca",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation entity.name.type punctuation.definition.bracket"
+          ],
+          "settings": {
+            "foreground": "#bb9af7"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation variable"
+          ],
+          "settings": {
+            "foreground": "#e0af68",
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    }
+  },
   "editor.codeActionsOnSave": {
     "quickfix.insertSemicolon": "explicit"
   },
@@ -18,7 +60,7 @@
   "[css][scss][less]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "workbench.colorTheme": "Codey Midnight",
+  "workbench.colorTheme": "Tokyo Night",
   "editor.fontLigatures": false,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -266,6 +308,38 @@
   "vim.statusBarColors.surroundinputmode": "#007ACC",
   "vim.foldfix": true,
   "workbench.colorCustomizations": {
+    "[Tokyo Night]": {
+      "foreground": "#959cbd",
+      "editorCodeLens.foreground": "#7982a9",
+      "panelTitle.activeBorder": "#3d59a1",
+      "panelTitle.activeForeground": "#bdc7f0",
+      "panelTitle.inactiveForeground": "#959cbd",
+      "tab.activeForeground": "#bdc7f0",
+      "tab.inactiveForeground": "#959cbd",
+      "breadcrumb.foreground": "#959cbd",
+      "breadcrumb.focusForeground": "#bdc7f0",
+      "breadcrumb.activeSelectionForeground": "#bdc7f0",
+      "statusBar.foreground": "#bdc7f0",
+      "list.focusForeground": "#bdc7f0",
+      "list.hoverForeground": "#bdc7f0",
+      "list.activeSelectionForeground": "#bdc7f0",
+      "list.inactiveSelectionForeground": "#bdc7f0",
+      "list.inactiveSelectionBackground": "#202330",
+      "titleBar.activeBackground": "#000000",
+      "statusBar.background": "#24283b",
+      "sideBar.background": "#000000",
+      "sideBar.foreground": "#ffffff",
+      "dropdown.foreground": "#959cbd",
+      "menu.foreground": "#bdc7f0",
+      "menubar.selectionForeground": "#bdc7f0",
+      "input.foreground": "#959cbd",
+      "input.placeholderForeground": "#959cbd",
+      "activityBar.foreground": "#bdc7f0",
+      "activityBar.inactiveForeground": "#787c99",
+      "gitDecoration.ignoredResourceForeground": "#696d87",
+      "window.activeBorder": "#ff0000",
+      "window.inactiveBorder": "#0000ff"
+    },
     "statusBar.background": "#B48EAD",
     "statusBar.noFolderBackground": "#B48EAD",
     "statusBar.debuggingBackground": "#B48EAD",
